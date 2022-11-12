@@ -9,11 +9,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Material(
-        child: Center(
-          child: Text("Welcome to my flutter app"),
+    int days = 30;
+    String name = "Diptesh";
+
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Catalog App"),
         ),
+        body: Center(
+          child: Container(
+            child: Text("Welcome to my flutter $days app $name"),
+          ),
+        ),
+        drawer: Drawer(),
       ),
     );
   }

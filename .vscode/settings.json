@@ -1,5 +1,6 @@
 {
   "dart.flutterHotReloadOnSave": "allIfDirty",
   "dart.hotReloadOnSave": "allIfDirty",
-  "files.autoSave": "off"
+  "files.autoSave": "off",
+  "cmake.sourceDirectory": "${workspaceFolder}/windows"
 }

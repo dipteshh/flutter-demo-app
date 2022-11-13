@@ -3,7 +3,15 @@
 import 'package:demo/utils/routes.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  String name = "";
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -17,7 +25,7 @@ class LoginPage extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
                 Text(
-                  "Welcome",
+                  "Welcome $name",
                   style: TextStyle(
                     fontSize: 28,
                     fontWeight: FontWeight.bold,
@@ -43,12 +51,16 @@ class LoginPage extends StatelessWidget {
                       SizedBox(
                         height: 40.0,
                       ),
-                      ElevatedButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, MyRoutes.homeRoute);
-                        },
-                        child: Text("Login"),
-                        style: TextButton.styleFrom(minimumSize: Size(150, 40)),
+                      // ElevatedButton(
+                      //   onPressed: () {
+                      //     Navigator.pushNamed(context, MyRoutes.homeRoute);
+                      //   },
+                      //   style: TextButton.styleFrom(minimumSize: Size(150, 40)),
+                      //   child: Text("Login"),
+                      // )
+                      Container(
+                        height: 150,
+                        width: 50,
                       )
                     ],
                   ),
